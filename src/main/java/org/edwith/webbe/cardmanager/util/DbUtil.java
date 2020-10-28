@@ -5,18 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DbUtil {
-	private String driver = "com.mysql.cj.jdbc.Driver";
-	private String server = "jdbc:mysql:localhost/3306/carddb?autoReconnect=true"
+	private static String driver = "com.mysql.cj.jdbc.Driver";
+	private static String server = "jdbc:mysql:localhost/3306/carddb?autoReconnect=true"
 			+ "&characterEncoding=UTF-8&ServerTimeZone=Asia/Seoul&"
 			+ "useSSL=false&useUnicode=true";
-	private String user = "manager";
-	private String pass = "card123";
+	private static String user = "manager";
+	private static String pass = "card123";
 	
-	public Connection getConnection() {
+	public static Connection getConnection() {
 		return getConnection(server, user, pass);
 	}
 
-	private Connection getConnection(String server, String user, String pass) {
+	private static Connection getConnection(String server, String user, String pass) {
 		Connection conn = null;
 		try {
 			Class.forName(driver);

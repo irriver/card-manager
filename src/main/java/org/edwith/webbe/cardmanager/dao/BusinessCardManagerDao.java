@@ -20,6 +20,7 @@ public class BusinessCardManagerDao {
 
 		try {
 			Connection conn = DbUtil.getConnection();
+			System.out.println("---- Connected ----");
 
 			PreparedStatement pstmt = conn.prepareStatement(selectQuery);
 			ResultSet rs = pstmt.executeQuery();
@@ -37,7 +38,6 @@ public class BusinessCardManagerDao {
 				// 만든 card dto 객체를 '조회목록'에 추가
 				cardList.add(newCard);
 			}
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -53,6 +53,8 @@ public class BusinessCardManagerDao {
 
 		try {
 			Connection conn = DbUtil.getConnection();
+			System.out.println("---- Connected ----");
+			
 			PreparedStatement pstmt = conn.prepareStatement(insertQuery);
 			// alt + shift + A => column line editing
 			pstmt.setString(1, businessCard.getName());

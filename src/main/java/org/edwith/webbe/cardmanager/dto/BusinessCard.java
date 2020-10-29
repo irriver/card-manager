@@ -49,11 +49,10 @@ public class BusinessCard {
 
     @Override
     public String toString() {
-        return "BusinessCard{" +
-                "name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", companyName='" + companyName + '\'' +
-                ", createDate=" + createDate +
-                '}';
+        return "Business Card\r\r"
+        		+ "Name\t\t" + name + "\r"
+        				+ "Phone\t\t" + phone + "\r"
+        						+ "Company_Name\t" + companyName + "\r"
+        								+ "Create_Date\t" + createDate;
     }
 }

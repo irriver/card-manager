@@ -30,7 +30,6 @@ public class BusinessCardManagerDao {
 				BusinessCard newCard = new BusinessCard(name, phone, companyName);
 				cardList.add(newCard);
 			}
-			System.out.println("---- End: Result of Query ----");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

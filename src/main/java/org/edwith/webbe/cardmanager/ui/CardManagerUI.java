@@ -69,6 +69,7 @@ public class CardManagerUI {
             System.out.println(businessCard);
             System.out.println("---------------------------------------------------------------");
         }
+        System.out.println("---- End: Result of Query ----");
     }
 
     public void printExitMessage(){

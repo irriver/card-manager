@@ -6,9 +6,8 @@ import java.sql.SQLException;
 
 public class DbUtil {
 	private static String driver = "com.mysql.cj.jdbc.Driver";
-	private static String server = "jdbc:mysql://localhost/3306/carddb?autoReconnect=true"
-			+ "&characterEncoding=UTF-8&ServerTimeZone=Asia/Seoul&"
-			+ "useSSL=false&useUnicode=true";
+	private static String server = "jdbc:mysql://localhost/carddb?serverTimezone=Asia/Seoul&useSSL=false"
+			+ "&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8";
 	private static String user = "manager";
 	private static String pass = "card123";
 	

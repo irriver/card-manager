@@ -20,7 +20,7 @@ public class BusinessCardManagerDao {
 
 		try {
 			Connection conn = DbUtil.getConnection();
-			System.out.println("---- Connected ----");
+			System.out.println("---- in Dao: Connected ----");
 
 			PreparedStatement pstmt = conn.prepareStatement(selectQuery);
 			ResultSet rs = pstmt.executeQuery();
@@ -49,7 +49,7 @@ public class BusinessCardManagerDao {
 	public BusinessCard addBusinessCard(BusinessCard businessCard) {
 		// BusinessCard 객체 생성 후 DB에 insert
 		SimpleDateFormat currDate = new SimpleDateFormat("EEE MMM dd HH:mm:ss z yyyy");
-		String insertQuery = "INSERT INTO card (name, phone, company_name, create_date) VALUES (?, ?, ?, ?)";
+		String insertQuery = "INSERT INTO businesscard (name, phone, company_name, create_date) VALUES (?, ?, ?, ?)";
 
 		try {
 			Connection conn = DbUtil.getConnection();

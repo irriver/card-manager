@@ -18,7 +18,7 @@ public class BusinessCardManagerDao {
 
 		try {
 			Connection conn = DbUtil.getConnection();
-			System.out.println("---- in Dao: Connected ----");
+			System.out.println(".... DB Connected");
 
 			PreparedStatement pstmt = conn.prepareStatement(selectQuery);
 			ResultSet rs = pstmt.executeQuery();
@@ -41,7 +41,7 @@ public class BusinessCardManagerDao {
 
 		try {
 			Connection conn = DbUtil.getConnection();
-			System.out.println("---- Connected ----");
+			System.out.println(".... Connected");
 
 			PreparedStatement pstmt = conn.prepareStatement(insertQuery);
 			pstmt.setString(1, businessCard.getName());

@@ -65,11 +65,12 @@ public class CardManagerUI {
     }
 
     public void printBusinessCards(List<BusinessCard> businessCardList){
+    	System.out.println("총 " + businessCardList.size() + "개의 명함이 검색되었습니다.");
         for(BusinessCard businessCard: businessCardList){
             System.out.println(businessCard);
             System.out.println("---------------------------------------------------------------");
         }
-        System.out.println("---- End: Result of Query ----");
+        System.out.println("검색 결과의 끝입니다.");
     }
 
     public void printExitMessage(){

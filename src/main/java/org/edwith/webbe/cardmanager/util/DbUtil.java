@@ -12,7 +12,7 @@ public class DbUtil {
 	private static String pass = "card123";
 	
 	public static Connection getConnection() {
-		System.out.println("---- Called getConnection() ----");
+		System.out.println(".... Called getConnection()");
 		return getConnection(server, user, pass);
 	}
 
@@ -21,12 +21,12 @@ public class DbUtil {
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(server, user, pass);
-			System.out.println("---- Tried to get Connection ----");
+			System.out.println(".... Tried to get Connection");
 		} catch (ClassNotFoundException e) {
-			System.out.println("---- Failed to Load Driver ----");
+			System.out.println(".... Failed to Load Driver");
 			e.printStackTrace();
 		} catch (SQLException e) {
-			System.out.println("---- Failed to Get Connection ----");
+			System.out.println(".... Failed to Get Connection");
 			e.printStackTrace();
 		}
 		return conn;

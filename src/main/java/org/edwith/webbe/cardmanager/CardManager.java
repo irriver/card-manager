@@ -26,6 +26,15 @@ public class CardManager {
                     cardManagerUI.printBusinessCards(businessCardList);
                     break;
                 case 3 :
+                	//수정할 이름 검색
+                	String editKeyword = cardManagerUI.getEditKeyword();
+                	List<BusinessCard> listForEdit = businessCardManagerDao.searchBusinessCard(editKeyword);
+                	cardManagerUI.printBusinessCards(listForEdit);
+                	//"OOO"이 맞습니까? (Y/n)
+                	int no = listForEdit.indexOf(0);
+                	businessCardManagerDao.updateBusinessCard(listForEdit.get(no));
+                	break;
+                case 4 :
                     cardManagerUI.printExitMessage();
                     break while_loop;
                 default:

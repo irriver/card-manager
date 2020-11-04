@@ -23,7 +23,8 @@ public class CardManagerUI {
         System.out.println("------------------------");
         System.out.println("1. 명함 입력");
         System.out.println("2. 명함 검색");
-        System.out.println("3. 종료");
+        System.out.println("3. 명함 수정");
+        System.out.println("4. 종료");
         System.out.println("------------------------");
         System.out.print("메뉴를 입력하세요 : ");
     }
@@ -71,6 +72,17 @@ public class CardManagerUI {
             System.out.println("---------------------------------------------------------------");
         }
         System.out.println("검색 결과의 끝입니다.");
+    }
+    
+    public String getEditKeyword() {
+    	 try {
+             System.out.print("수정할 이름을 전체 입력하세요.: ");
+             String editKeyword = in.readLine();
+             return editKeyword;
+         }catch(Exception ex){
+             System.out.println("잘못된 값을 입력했습니다. ");
+             return null;
+         }
     }
 
     public void printExitMessage(){
